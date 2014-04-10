@@ -1,8 +1,9 @@
+#! /usr/bin/env node
+
 var request = require('request');
 var cheerio = require('cheerio');
 var colors = require('colors');
 var githubUrl = 'https://github.com/';
-
 
 var getStreak = function (username, cb) {
     request(githubUrl + username, function (error, response, body) {
@@ -25,6 +26,7 @@ var getStreak = function (username, cb) {
         }
     });
 };
+
 
 if (!module.parent) {
     var username = process.argv[2];
