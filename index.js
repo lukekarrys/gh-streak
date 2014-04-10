@@ -26,7 +26,7 @@ var getStreak = function (username, cb) {
     });
 };
 
-if(!module.parent) {
+if (!module.parent) {
     var username = process.argv[2];
     getStreak(username, function (err, count) {
         var result;
