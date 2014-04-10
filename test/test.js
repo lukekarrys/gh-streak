@@ -3,7 +3,6 @@ var assert = require('assert');
 
 
 describe('GitHub streak', function () {
-
     it('It should get a number for a valid username', function (done) {
         ghStreak('lukekarrys', function (err, count) {
             assert.equal(typeof count, 'number');
@@ -27,5 +26,4 @@ describe('GitHub streak', function () {
             done();
         });
     });
-
 });

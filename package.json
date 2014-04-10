@@ -19,7 +19,9 @@
     "request": "^2.34.0"
   },
   "devDependencies": {
-    "mocha": "^1.18.2"
+    "mocha": "^1.18.2",
+    "jshint": "^2.5.0",
+    "precommit-hook": "^0.4.1"
   },
   "homepage": "https://github.com/lukekarrys/gh-streak",
   "keywords": [
