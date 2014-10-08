@@ -5,16 +5,16 @@ var assert = require('assert');
 describe('GitHub streak', function () {
     it('It should get a number for a valid username', function (done) {
         ghStreak('lukekarrys', function (err, count) {
-            assert.equal(typeof count, 'number');
-            assert.equal(err, null);
+            assert.equal(typeof count, 'number', 'count is a number');
+            assert.equal(err, null, 'err is null');
             done();
         });
     });
 
     it('It should return a 404 error for a user that does not exist', function (done) {
         ghStreak('not-real-user-im-sure-of-it', function (err, count) {
-            assert.equal(typeof count, 'undefined');
-            assert.equal(err.message.indexOf('404') > -1, true);
+            assert.equal(typeof count, 'undefined', 'count is undefined');
+            assert.equal(err.message, '404', 'error message is 404');
             done();
         });
     });

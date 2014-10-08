@@ -12,8 +12,8 @@ var getStreak = function (username, cb) {
         }
 
         var $ = cheerio.load(body);
-        var $streak = $('.contrib-streak-current .num');
-        var days = parseInt($streak.html(), 10);
+        var $streak = $('.contrib-number').last();
+        var days = parseInt($streak.text(), 10);
 
         if ($streak.length === 0) {
             cb(new Error('No contribution could be found. ' + username + ' might not be a user.'));
