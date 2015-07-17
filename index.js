@@ -31,15 +31,12 @@ var getStreak = function (username, cb) {
 if (!module.parent) {
     var username = process.argv[2];
     getStreak(username, function (err, count) {
-        var result;
-
         if (err) return console.error(err);
 
-        result = (count === 0 ? 'Write some code!' : 'Nice work!').bold;
         count = (count + '').blue;
         username = username.red;
 
-        console.log(username + ':', 'streak is at', count + '.', result);
+        console.log(username + ':', 'streak is at', count + '.');
     });
 } else {
     module.exports = getStreak;
