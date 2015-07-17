@@ -1,7 +1,7 @@
 {
   "name": "gh-streak",
   "description": "Get your current GitHub streak.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Luke Karrys",
     "email": "luke@lukekarrys.com",
