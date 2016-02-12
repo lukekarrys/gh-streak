@@ -23,11 +23,12 @@ Get your current GitHub streak.
 ```js
 var ghStreak = require('gh-streak');
 
-ghStreak(username, function (err, count) {
+ghStreak(username, function (err, count, year) {
     if (err) {
         // No user or streak could be found
     } else {
         console.log('The streak is', count);
+        console.log('Contributions for year', year);
     }
 });
 ```
