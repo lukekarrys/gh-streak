@@ -19,23 +19,30 @@
     "request": "^2.34.0"
   },
   "devDependencies": {
-    "jshint": "^2.5.0",
+    "jshint": "^2.9.2",
     "mocha": "^1.18.2",
-    "precommit-hook": "^1.0.7"
+    "precommit-hook": "^3.0.0"
   },
   "homepage": "https://github.com/lukekarrys/gh-streak",
   "keywords": [
     "code",
-    "streak",
-    "github"
+    "github",
+    "streak"
   ],
   "license": "MIT",
   "main": "index.js",
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:lukekarrys/gh-streak.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha -c -u bdd -R spec --timeout 10000 test/test.js"
+    "lint": "jshint .",
+    "test": "./node_modules/.bin/mocha -c -u bdd -R spec --timeout 10000 test/test.js",
+    "validate": "npm ls"
   }
 }

@@ -3,26 +3,10 @@ var assert = require('assert');
 
 
 describe('GitHub streak', function () {
-    it('It should get a number for a valid username', function (done) {
-        ghStreak('lukekarrys', function (err, count) {
-            assert.equal(typeof count, 'number', 'count is a number');
-            assert.equal(err, null, 'err is null');
-            done();
-        });
-    });
-
-    it('It should return a 404 error for a user that does not exist', function (done) {
-        ghStreak('not-real-user-im-sure-of-it', function (err, count) {
+    it('always errors', function (done) {
+        ghStreak('sdfsdfsdfsdf', function (err, count) {
             assert.equal(typeof count, 'undefined', 'count is undefined');
-            assert.equal(err.message, '404', 'error message is 404');
-            done();
-        });
-    });
-
-    it('It should not get a number if the page does not have a contribution', function (done) {
-        ghStreak('tweetyourbracket/scores', function (err, count) {
-            assert.equal(typeof count, 'undefined');
-            assert.equal(err.message.indexOf('might not be a user') > -1, true);
+            assert.equal(err.message, 'GitHub streaks are no more. More info: https://github.com/blog/2173-more-contributions-on-your-profile', 'error message');
             done();
         });
     });

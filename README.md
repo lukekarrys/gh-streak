@@ -1,10 +1,10 @@
 gh-streak
 =========
 
+## This module no longer works since it pulled streaks from the contribution graph [which has been removed](https://github.com/blog/2173-more-contributions-on-your-profile).
+
 [![NPM](https://nodei.co/npm/gh-streak.png)](https://nodei.co/npm/gh-streak/)
 [![Build Status](https://travis-ci.org/lukekarrys/gh-streak.png?branch=master)](https://travis-ci.org/lukekarrys/gh-streak)
-
-Get your current GitHub streak.
 
 ## Install
 
